@@ -1,0 +1,15 @@
+name: Mi primer pipeline
+
+on:
+    push:
+        branches: [main]
+
+jobs:
+    prueba:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Descargar codigo
+              uses: actions/checkout@v4
+
+            - name: Mostrar mensaje
+              run: echo "Pipeline funcionando correctamente"    
