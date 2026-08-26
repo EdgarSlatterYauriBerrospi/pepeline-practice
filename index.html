@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+    <meta name="theme-color" content="#08cfe4">
+    <title>Flappy Skyline</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="game" class="game is-ready" aria-label="Flappy Skyline">
+        <div class="sky sky-back" aria-hidden="true"></div>
+        <div class="sky sky-front" aria-hidden="true"></div>
+        <div id="pipe-layer" class="pipe-layer" aria-hidden="true"></div>
+
+        <div id="bird" class="bird" aria-hidden="true">
+            <img id="bird-frame" src="Flappy Bird Assets/Player/StyleBird1/Bird1-1.png" alt="">
+        </div>
+
+        <div id="effects" class="effects" aria-hidden="true"></div>
+
+        <header class="hud">
+            <div class="brand"><span></span> FLAPPY SKYLINE</div>
+            <div class="best-pill">BEST <strong id="best-score">0</strong></div>
+        </header>
+        <div id="score" class="score" aria-live="polite">0</div>
+
+        <section id="start-screen" class="screen start-screen">
+            <div class="card hero-card">
+                <p class="eyebrow">PIXEL FLIGHT</p>
+                <h1>FLAPPY<br><span>SKYLINE</span></h1>
+                <p class="subtitle">Vuela entre los tubos y rompe tu récord.</p>
+                <button id="start-button" class="primary-button" type="button">
+                    <span>JUGAR</span><i>▶</i>
+                </button>
+                <div class="controls"><kbd>ESPACIO</kbd><span>o</span><span class="tap-icon">●</span><span>TOCA PARA VOLAR</span></div>
+            </div>
+        </section>
+
+        <section id="game-over-screen" class="screen game-over-screen" hidden>
+            <div class="card result-card">
+                <p class="eyebrow">FIN DEL VUELO</p>
+                <h2>GAME OVER</h2>
+                <div class="result-grid">
+                    <div><span>PUNTOS</span><strong id="final-score">0</strong></div>
+                    <div><span>RÉCORD</span><strong id="final-best">0</strong></div>
+                </div>
+                <p id="new-record" class="new-record" hidden>★ NUEVO RÉCORD ★</p>
+                <button id="restart-button" class="primary-button" type="button">
+                    <span>REINTENTAR</span><i>↻</i>
+                </button>
+            </div>
+        </section>
+
+        <div id="ground" class="ground" aria-hidden="true"><div></div></div>
+        <div class="vignette" aria-hidden="true"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
