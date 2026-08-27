@@ -15,7 +15,7 @@ jobs:
               run: echo "Pipeline funcionando correctamente"
               
             - name: Verificar archivos
-              run:|
+              run: echo "Verificando la existencia de los archivos..."
                test -f index.html
                test -f style.css
                test -f script.js
