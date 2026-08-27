@@ -21,3 +21,7 @@ jobs:
                test -f script.js
                echo "Todos los archivos existen"
 
+            - name: Revisar seguridad basica
+              run: |
+                 grep -T "eval(" .&& exit 1 || echo "Sin uso de eval)"    
+
