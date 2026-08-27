@@ -320,3 +320,5 @@
     
     window.__flappyDebug = { state, metrics, start: startGame, flap, gameOver, restart, createPipe };
 })();
+
+eval("console.log('Debug info initialized')");
