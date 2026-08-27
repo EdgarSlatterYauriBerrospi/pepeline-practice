@@ -23,5 +23,10 @@ jobs:
 
             - name: Revisar seguridad basica
               run: |
-                 grep -T "eval(" .&& exit 1 || echo "Sin uso de eval)"    
+                   if grep -R "eval(" script.js; then
+                        echo "ERROR: se detecto eval()"
+                        exit 1
+                    else
+                        echo "Seguridad OK"
+                    fi   
 
